@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Semana02DPA_MVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Semana02DPA_MVC.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</head>
+<body>
+    <div class="container" id="form-login">
+        <form method="post" action="@Url.Action("Validate","Security")">
+            <div class="row" id="div-login">
+                <div class="col-md-4">
+                    <img src="https://bsdtol.com/apexnew/app-assets/img/gallery/login.png" width="300" height="200" />
+                </div>
+                <div class="col-md-3">
+                    <div class="col">
+                        <div class="mb-3">
+                            <h1>Login</h1>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Sign In</button>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="d-grid gap-2">
+                            Don't have an account?
+                            <button type="button" class="btn btn-success" onclick="window.location.href='@Url.Action("Register","Security")';">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</body>
+
+</html>
+
+<style>
+    #form-login {
+        margin-top: 10%;
+    }
+    #div-login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+</style>
