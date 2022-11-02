@@ -18,11 +18,9 @@ namespace aspnetcore_mvc_boilerplate.WEB.Controllers
         public IActionResult Validate(string email, string password)
         {
             if (email == "admin@peru.com" && password == "admin123")
-            { 
-                
-            }
+                return RedirectToAction("Index", "Home", new { Area = "Finance"});
 
-            return View();
+            return RedirectToAction("Login", "Security");
         }
     }
 }
